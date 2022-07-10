@@ -74,7 +74,7 @@ btn.addEventListener("click", () => {
     if (!checkS.checked) functions = functions.filter((e) => e != symbol)  
     password.push(functions[Math.floor(Math.random() * functions.length)]());
   }
-  if (password.split("")[0]) {
+  if (password.length) {
     pass.textContent = password.join("");
   } else {
     pass.textContent = "please select the types";
