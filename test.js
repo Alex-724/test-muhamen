@@ -68,10 +68,10 @@ btn.addEventListener("click", () => {
   let functions = [cap, num, small, symbol];
   let password = [];
   for (let i = 0; i < length.value; i++) {
-    if (!checknum.checked) functions = functions.filter((e) => e != cap && e != num)
-    if (!checkA.checked) functions = functions.filter((e) => e != cap && e != cap)
-    if (!checka.checked) functions = functions.filter((e) => e != cap && e != small)
-    if (!checkS.checked) functions = functions.filter((e) => e != cap && e != symbol)  
+    if (!checknum.checked) functions = functions.filter((e) => e != num)
+    if (!checkA.checked) functions = functions.filter((e) => e != cap)
+    if (!checka.checked) functions = functions.filter((e) => e != small)
+    if (!checkS.checked) functions = functions.filter((e) => e != symbol)  
     password.push(functions[Math.floor(Math.random() * functions.length)]());
   }
   if (password.split("")[0]) {
