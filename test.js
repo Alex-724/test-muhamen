@@ -75,13 +75,16 @@ btn.addEventListener("click", () => {
     password.push(functions[Math.floor(Math.random() * functions.length)]());
   }
   if (
-      (checknum.checked) ||
-      (checkA.checked) ||
-      (checka.checked) ||
-      (checkS.checked)
+    !(
+      !checknum.checked &&
+      !checkA.checked &&
+      !checka.checked &&
+      !checkS.checked
+    )
   ) {
     pass.textContent = password.join("");
   } else {
     pass.textContent = "please select the types";
   }
+
 });
