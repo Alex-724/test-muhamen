@@ -80,8 +80,8 @@ btn.addEventListener("click", () => {
       (checka.checked) ||
       (checkS.checked)
   ) {
-    pass.textContent = "please select the types";
-  } else {
     pass.textContent = password.join("");
+  } else {
+    pass.textContent = "please select the types";
   }
 });
